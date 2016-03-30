@@ -10,7 +10,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="leader-board">
-        <h1 className="leader-board-title">LeaderBoard</h1>
+        <h1 className="leader-board-title">Camper</h1>
+        <h2 className="leader-board-title">LeaderBoard</h2>
         <Table />
       </div>
     );
