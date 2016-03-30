@@ -23,7 +23,20 @@ class Table extends React.Component {
       campers: []
     };
     this.serverRequest = $.get("http://fcctop100.herokuapp.com/api/fccusers/top/recent", function (result) {
-      // console.log(result)
+      this.setState({
+        campers: result
+      })
+    }.bind(this));
+  }
+  _fetchTop30 = () => {
+    this.serverRequest = $.get("http://fcctop100.herokuapp.com/api/fccusers/top/recent", function (result) {
+      this.setState({
+        campers: result
+      })
+    }.bind(this));
+  }
+  _fetchAllTime = () => {
+    this.serverRequest = $.get("http://fcctop100.herokuapp.com/api/fccusers/top/alltime", function (result) {
       this.setState({
         campers: result
       })
@@ -35,8 +48,8 @@ class Table extends React.Component {
         <div className="row header">
           <div className="cell position">#</div>
           <div className="cell">Camper Name</div>
-          <div className="cell">Points in past 30 days</div>
-          <div className="cell">All time points</div>
+          <div className="cell" onClick={this._fetchTop30}>Points in past 30 days</div>
+          <div className="cell" onClick={this._fetchAllTime}>All time points</div>
         </div>
         {/* here is where we need to loop rows for every camper */}
         {this.state.campers.map(function(camper, i) {
