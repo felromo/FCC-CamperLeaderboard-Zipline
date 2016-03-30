@@ -20,6 +20,9 @@ $md: 500px;
     font-weight: 700;
     background-color: $dark-color;
   }
+  &.cell {
+    position: relative;
+  }
 }
 
 .row {
@@ -52,4 +55,16 @@ $md: 500px;
 
 .position {
   flex: .2;
+}
+
+.top-30 {
+  cursor: pointer;
+}
+.top-all {
+  cursor: pointer;
+}
+
+.fa {
+  padding-left: 5px;
+  margin-top: 2px;
 }
