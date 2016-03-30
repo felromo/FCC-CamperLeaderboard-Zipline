@@ -1,0 +1,55 @@
+@import "~breakpoint-sass/stylesheets/breakpoint";
+
+$dark-color: #f2f2f2;
+$light-color: #fff;
+$md: 500px;
+
+.Table {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 1px solid $dark-color;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1.5;
+}
+
+.header {
+  display: none;
+  @include breakpoint($md) {
+    font-weight: 700;
+    background-color: $dark-color;
+  }
+}
+
+.row {
+  width: 100%;
+  &:nth-of-type(even) { background-color: $dark-color; }
+  &:nth-of-type(odd) { background-color: $light-color; }
+  @include breakpoint($md) {
+    display: flex;
+    flex-flow: row nowrap;
+    &:nth-of-type(even) { background-color: $light-color; }
+    &:nth-of-type(odd) { background-color: $dark-color; }
+  }
+}
+
+.cell {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  word-wrap: break-word;
+  justify-content: center;
+  @include breakpoint($md) {
+    border: 1px solid #fff;
+    padding: 0.5em;
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.position {
+  flex: .2;
+}
