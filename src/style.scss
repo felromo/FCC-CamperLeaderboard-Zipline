@@ -57,6 +57,16 @@ $md: 500px;
   flex: .2;
 }
 
+img {
+  width: 50px;
+  height: 50px;
+  padding-right: 5px;
+}
+
+.camper-name {
+  justify-content: flex-start;
+}
+
 .top-30 {
   cursor: pointer;
 }

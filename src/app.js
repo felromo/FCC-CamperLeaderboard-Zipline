@@ -60,10 +60,10 @@ class Table extends React.Component {
         {this.state.campers.map(function(camper, i) {
           return (
             <div key={i} className="row">
-              <div className="cell position">{i+1}</div>
-              <div className="cell">{camper.username}</div>
-              <div className="cell">{camper.recent}</div>
-              <div className="cell">{camper.alltime}</div>
+              <div className="cell position"><p>{i+1}</p></div>
+              <div className="cell camper-name"><img src={camper.img}/><p>{camper.username}</p></div>
+              <div className="cell"><p>{camper.recent}</p></div>
+              <div className="cell"><p>{camper.alltime}</p></div>
             </div>
           );
         })}
