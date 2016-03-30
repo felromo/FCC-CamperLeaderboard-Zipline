@@ -10,4 +10,4 @@ CamperLeaderboard is a web application designed to display a list of camperes wi
 Some Instructions
 
 ## Credits
-[list of people/tutorials to thank for making this application possible]
+* [table based on this tutorial] (http://inlehmansterms.net/2014/10/11/responsive-tables-with-flexbox/)
